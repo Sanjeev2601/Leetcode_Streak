@@ -7,13 +7,13 @@ class Solution {
             if (flowerbed[i] == 0) {
                 int next = (i == flowerbed.length - 1) ? 0 : flowerbed[i + 1];
                 int prev = (i == 0) ? 0 : flowerbed[i - 1];
-                if (next == 0 && prev == 0) {
+                if (prev == 0 && next == 0) {
                     flowerbed[i] = 1; 
                     count++;
                 }
             }
             i++;
         }
-        return count >=n;
+        return count >= n;
     }
 }
