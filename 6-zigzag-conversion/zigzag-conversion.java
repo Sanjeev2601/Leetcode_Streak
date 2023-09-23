@@ -4,16 +4,6 @@ class Solution {
             return s;
         }
         int n = s.length();
-        // int numCol = 1;
-        // if(n>=numRows){
-        //     numCol = (n/numRows) + ((numRows-2)*(n/numRows-1));
-        // }
-        // if(numRows == 2 && (n % numRows) == (numRows-1)){
-        //     numCol++;
-        // }
-        // else if((n % numRows) == (numRows-2)){
-        //     numCol++;
-        // }
         char[][] zig = new char[numRows][n];
         int i = 0, toggle = -1, c= 0, r = 0;
         while(i<n){
