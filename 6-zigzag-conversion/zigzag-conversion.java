@@ -23,7 +23,7 @@ class Solution {
         StringBuilder ans = new StringBuilder();
         for (char[] row: zig) {
             for (char character: row) {
-                if (character != ' ' && character != '\u0000') {
+                if (character != '\u0000') {
                     ans.append(character);
                 }
             }
