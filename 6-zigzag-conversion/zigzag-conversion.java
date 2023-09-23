@@ -10,12 +10,11 @@ class Solution {
             if(r == 0 || (r == numRows - 1)){
                 toggle *= -1;
             }
+            zig[r][c] = s.charAt(i);
             if(toggle == 1){
-                zig[r][c] = s.charAt(i);
                 r++;
             }
             else if(toggle == -1){
-                zig[r][c] = s.charAt(i);
                 r--;
                 c++;
             }
