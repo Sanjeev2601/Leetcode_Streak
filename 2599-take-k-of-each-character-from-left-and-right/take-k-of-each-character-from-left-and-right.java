@@ -26,8 +26,7 @@ class Solution {
             i--;
             while(!valid(arr,k) && j>=0){
                 arr[s.charAt(j)-'a']++;
-                j--;
-                    
+                j--;    
             }
             sum = arr[0] + arr[1] + arr[2];
             mini = Math.min(sum,mini);
