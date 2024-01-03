@@ -5,18 +5,20 @@ class Solution {
             return false;
         }
         Stack<Character> stack = new Stack<Character>();
-        for(char c : s.toCharArray()){
-            if(c=='('){
-                stack.push(')');
+        for(int i = 0; i < n; i++){
+            char ch = s.charAt(i);
+            if(stack.isEmpty() || ch == '(' || ch == '[' || ch == '{'){
+                stack.push(ch);
             }
-            else if(c=='['){
-                stack.push(']');
-            }
-            else if(c=='{'){
-                stack.push('}');
-            } 
-            else if(stack.isEmpty() || stack.pop()!=c){
-                return false;
+            else{
+                if((stack.peek() == '(' && ch == ')') ||
+                (stack.peek() == '[' && ch == ']') ||
+                (stack.peek() == '{' && ch == '}')){
+                    stack.pop();
+                }
+                else{
+                    return false;
+                }
             }
         }
         return stack.isEmpty();
