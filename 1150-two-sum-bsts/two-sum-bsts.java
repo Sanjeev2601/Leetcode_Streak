@@ -23,13 +23,12 @@ class Solution {
         return find(root2, target, hs);
     }
     public void addRoot1(TreeNode root1, Set<Integer> hs){
+        if(root1 == null){
+            return;
+        }
         hs.add(root1.val);
-        if(root1.left != null){
-            addRoot1(root1.left, hs);
-        }
-        if(root1.right != null){
-            addRoot1(root1.right, hs);
-        }
+        addRoot1(root1.left, hs);
+        addRoot1(root1.right, hs);
     }
     public boolean find(TreeNode root2, int target, Set<Integer> hs){
         if(root2 == null){
