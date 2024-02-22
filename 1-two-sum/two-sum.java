@@ -5,7 +5,7 @@ class Solution {
         for (int i = 0; i < len; i++) {
             hm.put(nums[i],i);
         }
-        for (int i = 0; i < len; ++i) {
+        for (int i = 0; i < len-1; ++i) {
             int a = nums[i];
             int complement = target - a;
             if (hm.containsKey(complement) && hm.get(complement)!=i) {
