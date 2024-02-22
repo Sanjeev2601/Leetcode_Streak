@@ -3,7 +3,7 @@ class Solution {
         Arrays.sort(nums);
         int n = nums.length;
         List<List<Integer>> ans = new ArrayList<>();
-        for(int i = 0; i < nums.length && nums[i] <= 0; ++i){
+        for(int i = 0; i < n; ++i){
             if(i == 0 || nums[i - 1] != nums[i]){
                 threeSum(nums, i, ans);
             }
