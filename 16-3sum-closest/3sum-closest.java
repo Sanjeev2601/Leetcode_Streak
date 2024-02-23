@@ -33,21 +33,3 @@ class Solution {
         return check;
     }
 }
-
-// import java.util.Arrays;
-
-// class Solution {
-//     public int threeSumClosest(int[] nums, int target) {
-//         Arrays.sort(nums);
-//         int n = nums.length;
-//         int ans = nums[0] + nums[1] + nums[2]; 
-//         for (int i = 0; i < n - 2; i++) {
-//             if (i == 0 || nums[i] != nums[i - 1]) {
-//                 int closestSum = threeSum(nums, i, target);
-//                 if (Math.abs(closestSum - target) < Math.abs(ans - target)) {
-//                     ans = closestSum;
-//                 }
-//             }
-//         }
-//         return ans;
-//     }
