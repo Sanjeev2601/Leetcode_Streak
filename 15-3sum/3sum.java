@@ -3,13 +3,13 @@ class Solution {
         Arrays.sort(nums);
         int n = nums.length;
         List<List<Integer>> ans = new ArrayList<>();
-        for(int i = 0; i < n; ++i){
+        for(int i = 0; i < n - 2; ++i){
             if(i == 0 || nums[i - 1] != nums[i]){
                 threeSum(nums, i, ans);
             }
         }
         return ans;
-    }
+     }
     void threeSum(int[] nums, int i, List<List<Integer>> ans){
         int s = i + 1, e = nums.length - 1;
         while(s < e){
