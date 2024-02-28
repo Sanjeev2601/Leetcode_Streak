@@ -7,13 +7,12 @@ class Solution {
             if(val == nums[i])
             {    
                 k++;
-                count++;
             }
             else{
                 nums[i - k] = nums[i];
             }
         }
-        return n - count;
+        return n - k;
         
     }
 }
