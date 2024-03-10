@@ -14,6 +14,7 @@ class Solution {
         ListNode odd = head.next;
         int oc = 0, ec = 0;
         while(even != null){
+            odd = even.next;
             if(even.val > odd.val){
                 ec++;
             }
@@ -21,10 +22,6 @@ class Solution {
                 oc++;
             }
             even = odd.next;
-            if(even == null){
-                break;
-            }
-            odd = even.next;
         }
         if(oc > ec){
             return "Odd";
