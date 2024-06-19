@@ -20,6 +20,7 @@ class Solution {
         int start = 0;
         int end = 0;
         for (int day : bloomDay) {
+            start = Math.min(start, day);
             end = Math.max(end, day);
         }
         int minDays = -1;
