@@ -17,8 +17,8 @@ class Solution {
         return numOfBouquets;
     }
     public int minDays(int[] bloomDay, int m, int k) {
-        int start = 0;
-        int end = 0;
+        int start = Integer.MAX_VALUE;
+        int end = Integer.MIN_VALUE;
         for (int day : bloomDay) {
             start = Math.min(start, day);
             end = Math.max(end, day);
