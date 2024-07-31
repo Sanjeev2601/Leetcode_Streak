@@ -11,7 +11,7 @@
 class Solution {
     public String gameResult(ListNode head) {
         ListNode even = head;
-        ListNode odd = head;
+        ListNode odd = head.next;
         int oc = 0, ec = 0;
         while(even != null){
             odd = even.next;
