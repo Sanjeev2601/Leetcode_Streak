@@ -17,7 +17,6 @@ class Solution {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> ans = new LinkedList<>();
         Queue<TreeNode> q = new LinkedList<>();
-        Stack<TreeNode> s = new Stack<>();
         if(root == null){
             return ans;
         }
